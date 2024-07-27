@@ -1,12 +1,14 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-  background: {
+  container: {
     flex: 1,
-    padding: 20,
+    // padding: 0,
   },
   formContainer: {
     marginBottom: 20,
+    backgroundColor: '#f8f9fa',
+    padding: 10,
   },
   input: {
     height: 40,
@@ -14,31 +16,39 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     marginBottom: 20,
     paddingHorizontal: 10,
+    color: 'black',
+    fontSize: 16,
   },
   title: {
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#1D242B',
     padding: 20,
     textAlign: 'center',
   },
-  mainButon: {
-    width: 150,
+  mainButton: {
+    width: '100%',
     height: 50,
     backgroundColor: '#134B70',
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: 90,
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     shadowRadius: 2,
   },
-  textButon: {
+  textButton: {
     color: '#fff',
     fontSize: 20,
     fontWeight: 'semibold',
+  },
+  backButton: {
+    marginBottom: 16,
+  },
+  backButtonText: {
+    color: '#007BFF',
+    fontSize: 16,
   },
   tabla: {
     borderWidth: 1,
@@ -46,29 +56,30 @@ export const styles = StyleSheet.create({
   },
   header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
     backgroundColor: '#134B70',
+    alignItems: 'center',
   },
   headerCell: {
-    fontSize: 15,
+    flex: 1,
+    fontSize: 16,
     fontWeight: 'bold',
     color: '#ffffff',
-    width: '15%',
+    width: 100,
     textAlign: 'center',
     padding: 5,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 10,
+    padding: 5,
   },
   cell: {
-    backgroundColor:'#eeecec',
+    flex: 1,
+    backgroundColor: '#e3e2e2',
     fontSize: 16,
-    color: '#292828',
-    width: '15%',
+    color: '#000000',
+    width: 100, 
     textAlign: 'center',
-    padding: 5,
+    padding: 9,
   },
 });
