@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, View, ScrollView } from 'react-native';
-import { styles } from '../../config/them';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import {Text, View, ScrollView} from 'react-native';
+import {styles} from '../../config/them';
+import {RouteProp, useRoute} from '@react-navigation/native';
 
 type RouteParams = {
   AmortizationPlan: {
@@ -21,7 +21,7 @@ type RouteParams = {
 
 export const AmortizationPlan = () => {
   const route = useRoute<RouteProp<RouteParams, 'AmortizationPlan'>>();
-  const { plan } = route.params;
+  const {plan} = route.params;
 
   return (
     <View style={styles.container}>
@@ -45,11 +45,19 @@ export const AmortizationPlan = () => {
                   <Text style={styles.cell}>{payment.month}</Text>
                   <Text style={styles.cell}>{payment.date}</Text>
                   <Text style={styles.cell}>${payment.payment.toFixed(2)}</Text>
-                  <Text style={styles.cell}>${payment.interest.toFixed(2)}</Text>
-                  <Text style={styles.cell}>${payment.principal.toFixed(2)}</Text>
+                  <Text style={styles.cell}>
+                    ${payment.interest.toFixed(2)}
+                  </Text>
+                  <Text style={styles.cell}>
+                    ${payment.principal.toFixed(2)}
+                  </Text>
                   <Text style={styles.cell}>${payment.svsd.toFixed(2)}</Text>
-                  <Text style={styles.cell}>${payment.totalPayment.toFixed(2)}</Text>
-                  <Text style={styles.cell}>${payment.overdueInterest.toFixed(2)}</Text>
+                  <Text style={styles.cell}>
+                    ${payment.totalPayment.toFixed(2)}
+                  </Text>
+                  <Text style={styles.cell}>
+                    ${payment.overdueInterest.toFixed(2)}
+                  </Text>
                   <Text style={styles.cell}>${payment.balance.toFixed(2)}</Text>
                 </View>
               ))}

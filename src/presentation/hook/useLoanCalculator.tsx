@@ -32,6 +32,7 @@ export const useLoanCalculator = () => {
     const levelPayment =
       (amountToFinance *
         monthlyInterestRate *
+        // Retorna la base elevado al exponente
         Math.pow(1 + monthlyInterestRate, term)) /
       (Math.pow(1 + monthlyInterestRate, term) - 1);
 
@@ -43,6 +44,7 @@ export const useLoanCalculator = () => {
     for (let month = 1; month <= term; month++) {
       const interest = balance * monthlyInterestRate;
       const principal = levelPayment - interest;
+      // Retorna el valor mayor de la lista pasado como parametros
       const svsd = Math.max(balance * 0.0015, 2);
 
       const overdueDays = 30;
